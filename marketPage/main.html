@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Tennis Market</title>
+    <style>
+      body {
+        margin: 0;
+        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+        background-color: #f9f9f9;
+        color: #333;
+      }
+
+      h1 {
+        text-align: center;
+        margin-top: 40px;
+        font-size: 36px;
+        color: #2c3e50;
+      }
+
+      #txt_welcome {
+        text-align: center;
+        margin: 20px 0 60px;
+        font-size: 18px;
+        line-height: 1.6;
+      }
+
+      #txt_welcome div {
+        color: #3498db;
+        text-decoration: none;
+        font-weight: bold;
+      }
+
+      #txt_welcome a:hover {
+        text-decoration: underline;
+      }
+
+      .grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+        gap: 40px;
+        padding: 0 40px 60px;
+        max-width: 1200px;
+        margin: 0 auto;
+      }
+
+      .card {
+        background-color: #fff;
+        padding: 20px;
+        border-radius: 12px;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+        text-align: center;
+        transition: transform 0.2s ease;
+      }
+
+      .card:hover {
+        transform: translateY(-5px);
+      }
+
+      .card_img {
+        width: 100%;
+        max-width: 180px;
+        height: auto;
+        object-fit: contain;
+        margin-bottom: 20px;
+      }
+
+      .card_title {
+        font-size: 20px;
+        margin-bottom: 15px;
+        color: #34495e;
+      }
+
+      .card_button {
+        font-size: 16px;
+        width: 120px;
+        height: 36px;
+        background-color: #3498db;
+        color: white;
+        border: none;
+        border-radius: 6px;
+        cursor: pointer;
+        transition: background-color 0.2s ease;
+      }
+
+      .card_button:hover {
+        background-color: #2980b9;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Tennis Market</h1>
+    <div id="txt_welcome">
+      안녕하세요. 민선오님.<br />
+      테니스 마켓에 오신 것을 환영합니다.
+      <br /><br />
+      <div onclick="location.href='/order?productId=1'">주문내역</div>
+    </div>
+
+    <div class="grid">
+      <div class="card">
+        <img class="card_img" src="./img/redRacket.png" alt="Red Racket" />
+        <p class="card_title">Red Racket</p>
+        <input
+          class="card_button"
+          type="button"
+          value="Order"
+          onclick="location.href='/orderlist?productId=1'"
+        />
+      </div>
+      <div class="card">
+        <img class="card_img" src="./img/blueRacket.png" alt="Blue Racket" />
+        <p class="card_title">Blue Racket</p>
+        <input
+          class="card_button"
+          type="button"
+          value="Order"
+          onclick="location.href='/orderlist?productId=2'"
+        />
+      </div>
+      <div class="card">
+        <img class="card_img" src="./img/blackRacket.png" alt="Black Racket" />
+        <p class="card_title">Black Racket</p>
+        <input
+          class="card_button"
+          type="button"
+          value="Order"
+          onclick="location.href='/orderlist?productId=3'"
+        />
+      </div>
+    </div>
+  </body>
+</html>
