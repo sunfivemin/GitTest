@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Login Page</title>
+    <link rel="stylesheet" href="./style.css" />
+    <script src="./script.js" defer></script>
+  </head>
+  <body>
+    <h1>Login</h1>
+    <form action="/login" method="POST">
+      <input
+        id="txt_id"
+        class="login_inputs"
+        type="text"
+        name="id"
+        placeholder="ID"
+        autocomplete="username"
+        required
+      />
+      <input
+        id="txt_pw"
+        class="login_inputs"
+        type="password"
+        name="password"
+        placeholder="Password"
+        autocomplete="current-password"
+        onclick="myFunction('비밀번호 입력칸 클릭!')"
+        required
+      />
+      <button id="btn" type="button" onclick="checkLogin()">로그인 하기</button>
+    </form>
+    <a href="/go.html">비밀번호 찾기</a>
+  </body>
+</html>

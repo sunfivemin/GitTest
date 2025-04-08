@@ -2,8 +2,6 @@ const fs = require("fs");
 const main_view = fs.readFileSync("./main.html", "utf-8");
 const orderlist_view = fs.readFileSync("./orderlist.html");
 
-// const { log } = require("console");
-
 const mariadb = require("./database/connect/mariadb");
 
 function main(response) {
